@@ -9,30 +9,6 @@ For each repository, the response contains:
 - owner login
 - list of branches with the SHA of the last commit
 
-The application acts as a simple proxy to the public GitHub REST API.
-
-Scope of the Solution
-
-The project was implemented strictly according to the task requirements:
-
-- no WebFlux (Spring MVC only)
-
-- no pagination
-
-- no security, caching, or resilience mechanisms
-
-- integration tests only (no Spring mocks)
-
-- external API emulation using WireMock
-
-- minimal number of classes and models
-
-- single package (no DDD / hexagonal architecture)
-
-- simple architecture: Controller → Service → Client
-
-- application treated as a proxy
-
 🛠️ Technology Stack
 
 Java 21
@@ -49,8 +25,6 @@ JUnit 5
 
 WireMock
 
-⚠️ Note: Spring Boot 4.0.1 and official support for Java 25 are not currently available.
-The code is written in a style compatible with these requirements, using the closest stable versions.
 
 🚀 Running the Application
 Prerequisites
@@ -149,5 +123,6 @@ The project is intentionally simplified and does not include features beyond the
 - pagination
 
 - advanced architectural patterns
+
 
 The goal of this solution is clarity, correctness, and strict compliance with the requirements, not production completeness.
